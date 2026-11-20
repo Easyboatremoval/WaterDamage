@@ -67,6 +67,22 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      
+ {/* ---------- GALLERY ---------- */}
+      <section className="section section-tint" aria-labelledby="work-title">
+        <div className="container">
+          <p className="eyebrow">From the field</p>
+          <h2 id="work-title">Water, Flood &amp; Storm Damage Jobs in Florida</h2>
+          <div className="gallery">
+            {GALLERY.map((g, i) => (
+              <figure key={g.src} className={i === 0 ? 'gallery-feature' : undefined}>
+                <Image src={g.src} alt={g.alt} width={480} height={640} sizes="(max-width: 700px) 50vw, 25vw" />
+                <figcaption>{g.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ---------- SERVICES ---------- */}
       <section className="section" id="services" aria-labelledby="services-title">
@@ -134,23 +150,7 @@ export default function HomePage() {
           </ol>
         </div>
       </section>
-
-      {/* ---------- GALLERY ---------- */}
-      <section className="section section-tint" aria-labelledby="work-title">
-        <div className="container">
-          <p className="eyebrow">From the field</p>
-          <h2 id="work-title">Water, Flood &amp; Storm Damage Jobs in Florida</h2>
-          <div className="gallery">
-            {GALLERY.map((g, i) => (
-              <figure key={g.src} className={i === 0 ? 'gallery-feature' : undefined}>
-                <Image src={g.src} alt={g.alt} width={480} height={640} sizes="(max-width: 700px) 50vw, 25vw" />
-                <figcaption>{g.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* ---------- FLORIDA CONTEXT + INSURANCE ---------- */}
       <section className="section" id="insurance" aria-labelledby="insurance-title">
         <div className="container split">
