@@ -8,8 +8,8 @@ import { GALLERY } from '@/lib/content';
 import { CITY_CONTENT } from '@/lib/cityContent';
 import { CITIES_WITH_PAGES, getCityBySlug, getNearbyCities, cityPath, hasCityPage } from '@/lib/cities';
 
-// Only cities with local content get a page; anything else is a 404.
-export const dynamicParams = false;
+// Only cities with local content get a page; anything else is a 404 (via notFound() below).
+// Don't set `dynamicParams = false` here: in Next.js 15 it logs "NoFallbackError" for every unknown city URL.
 
 export function generateStaticParams() {
   return CITIES_WITH_PAGES.map((c) => ({ city: c.slug }));
@@ -19,7 +19,7 @@ function load(slug) {
   const city = getCityBySlug(slug);
   const local = CITY_CONTENT[slug];
   if (!city || !local) return null;
-  return { city, local };
+  return { city, local: { ...local, zips: local.zips ?? city.zips } };
 }
 
 export async function generateMetadata({ params }) {
