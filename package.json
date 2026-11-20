@@ -1,0 +1,20 @@
+{
+  "name": "cwm-water-damage-restoration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CWM Water Damage Restoration — Florida water, fire, mold and floor damage restoration website (Next.js / React / Node.js).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
