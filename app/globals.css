@@ -92,6 +92,17 @@ p { margin: 0 0 1em; }
 .form-note { margin: 0; font-size: 0.88rem; color: var(--muted); text-align: center; }
 .form-error { margin: 0; color: #b42318; font-size: 0.92rem; }
 .form-done p { color: var(--muted); }
+#estimate { scroll-margin-top: 120px; }
+.photo-field { display: grid; gap: 8px; }
+.photo-label { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
+.photo-field small { color: var(--muted); font-size: 0.82rem; }
+.photo-add { font: inherit; font-weight: 600; padding: 11px 12px; border: 1.5px dashed var(--blue-2); border-radius: 9px; background: #f0f8fe; color: var(--blue-2); cursor: pointer; }
+.photo-add:hover { background: #e2f2fd; }
+.photo-add:disabled { opacity: 0.6; cursor: wait; }
+.photo-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.photo-list li { position: relative; aspect-ratio: 1; }
+.photo-list img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
+.photo-list button { position: absolute; top: -7px; right: -7px; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; background: var(--navy); color: #fff; font-size: 15px; line-height: 1; cursor: pointer; display: grid; place-items: center; padding: 0; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* Trust */
@@ -167,14 +178,24 @@ p { margin: 0 0 1em; }
 .cta-band h2 { color: #fff; margin-bottom: 0.2em; }
 .cta-band p { margin: 0; color: #dcebf8; font-size: 1.1rem; }
 
-/* Service areas */
-.areas-grid { columns: 4 230px; column-gap: 32px; margin-top: 30px; }
-.area-col { break-inside: avoid; margin-bottom: 26px; }
-.area-col h3 { font-size: 1.08rem; text-transform: uppercase; color: var(--navy); border-bottom: 2px solid var(--blue); padding-bottom: 6px; margin-bottom: 10px; }
-.area-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; }
-.area-col li { font-size: 0.97rem; color: var(--muted); }
-.area-col a { color: var(--ink); text-decoration: none; }
-.area-col a:hover { color: var(--blue-2); text-decoration: underline; }
+/* Service areas — Florida map */
+.fl-map { margin: 30px 0 0; background: linear-gradient(180deg, #e6f3fb, #d4eaf7); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); }
+.fl-map svg { display: block; width: 100%; height: auto; }
+.fl-neighbor { fill: #eef2f6; stroke: #c4d1de; stroke-width: 2; }
+.fl-land { fill: #fff; stroke: var(--navy-3); stroke-width: 2.5; stroke-linejoin: round; }
+.fl-state { font-family: var(--font-display); font-size: 22px; letter-spacing: 0.3em; fill: #9fb2c6; }
+.fl-sea { font-family: var(--font-display); font-size: 26px; font-style: italic; letter-spacing: 0.08em; fill: #7fa9c9; }
+.fl-dot { fill: var(--blue-2); stroke: #fff; stroke-width: 3; }
+.fl-pin.tier-1 .fl-dot { fill: #e0342b; }
+.fl-pulse { fill: rgba(224, 52, 43, 0.22); transform-box: fill-box; transform-origin: center; animation: fl-pulse 2.4s ease-out infinite; }
+.fl-pin.tier-2 .fl-pulse { display: none; }
+.fl-label { font-family: var(--font-body); font-weight: 700; font-size: 24px; fill: var(--navy); paint-order: stroke; stroke: rgba(255, 255, 255, 0.9); stroke-width: 6px; stroke-linejoin: round; }
+.fl-pin.tier-2 .fl-label { font-size: 20px; font-weight: 600; fill: var(--muted); }
+.fl-pin:hover .fl-dot { r: 11; }
+.fl-label-short { display: none; }
+.fl-map figcaption { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; color: var(--muted); font-weight: 600; font-size: 0.95rem; text-align: center; }
+.fl-key { flex: none; width: 14px; height: 14px; border-radius: 50%; background: #e0342b; border: 3px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+@keyframes fl-pulse { from { transform: scale(0.4); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 
 /* Footer */
 .site-footer { background: #071a2e; color: #b8c9dc; padding: 56px 0 90px; font-size: 0.96rem; }
@@ -206,10 +227,20 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 700px) {
   body { font-size: 16px; }
-  .topbar p { display: none; }
-  .topbar-inner { justify-content: center; }
-  .nav-call { display: none; }
-  .brand-name { font-size: 1.35rem; }
+  .topbar, .nav-call { display: none; }
+  .nav-inner { justify-content: center; padding: 12px 0; }
+  .brand { gap: 14px; }
+  .brand img { width: 72px; height: 72px; }
+  .brand-name { font-size: 2.2rem; }
+  .brand-sub { font-size: 0.92rem; letter-spacing: 0.1em; }
+  .fl-map { padding: 6px; margin-left: -8px; margin-right: -8px; }
+  .fl-pin.tier-2 .fl-label, .fl-sea, .fl-state { display: none; }
+  .fl-pin.tier-1 .fl-label { font-size: 34px; stroke-width: 8px; }
+  .fl-pin .fl-label.has-short { display: none; }
+  .fl-pin .fl-label-short { display: inline; }
+  .fl-map figcaption { font-size: 0.85rem; padding: 0 8px 6px; }
+  .fl-key { display: none; }
+  .callbar a { font-size: 0.95rem; }
   .hero { padding-bottom: 120px; }
   .hero-checks { grid-template-columns: 1fr; }
   .hero-ctas .btn { width: 100%; }
@@ -217,11 +248,14 @@ p { margin: 0 0 1em; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .gallery-feature { grid-row: auto; grid-column: span 2; }
   .gallery-feature img { aspect-ratio: 4 / 3; }
-  .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; align-items: center; justify-content: center; gap: 10px; padding: 14px; background: var(--blue); color: var(--navy); font-weight: 800; font-size: 1.08rem; text-decoration: none; box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.2); }
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.2); padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--navy); }
+  .callbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 8px; font-weight: 800; font-size: 1rem; line-height: 1.15; text-align: center; text-decoration: none; }
+  .callbar-call { background: var(--blue); color: var(--navy); }
+  .callbar-inspect { background: var(--amber); color: var(--navy); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pulse { animation: none; }
+  .pulse, .fl-pulse { animation: none; }
   .btn, .service-card { transition: none; }
 }

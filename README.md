@@ -6,7 +6,7 @@ Built with **Next.js 15 (React 19, Node.js)**. Pages are rendered on the server,
 
 ```bash
 npm install
-cp .env.example .env.local   # set your real domain
+cp .env.example .env.local   # set your domain + Telegram bot
 npm run dev                  # http://localhost:3000
 ```
 
@@ -27,7 +27,8 @@ Vercel works without any setup.
 |---|---|
 | Name, phone, hours, domain | `lib/site.js` |
 | Services, process, FAQ, gallery text | `lib/content.js` |
-| Florida city list (by region) | `lib/cities.js` |
+| Florida city list (by region) + map pins | `lib/cities.js` |
+| Florida map outline (generated) | `lib/florida-map.js` |
 | Homepage sections | `app/page.jsx` |
 | Title, description, Open Graph | `app/layout.jsx` |
 | Schema.org structured data | `components/JsonLd.jsx` |
@@ -37,9 +38,23 @@ Vercel works without any setup.
 | Styles | `app/globals.css` |
 | Keyword strategy | `SEO-KEYWORDS.md` |
 
-## Form leads
+## Form leads → Telegram
 
-`/api/contact` validates each submission, blocks spam with a honeypot field and logs the lead. To have leads forwarded, set `LEAD_WEBHOOK_URL`, for example to a Zapier or Make webhook that emails or texts you. You can also connect an email service in that file.
+The "Request an Inspection" form posts to `/api/contact`, which validates the lead, blocks spam with a honeypot field, and sends it to Telegram. Customers can attach up to 5 photos (optional). They're shrunk in the browser before upload, then posted to the chat after the text alert.
+
+**Setup (about 3 minutes):**
+
+1. In Telegram, open **@BotFather**, send `/newbot`, and follow the prompts. Copy the token it gives you (`123456789:AA...`).
+2. Open your new bot and press **Start**. To send alerts to a team group, add the bot to the group and post any message there.
+3. Get the chat ID: `TELEGRAM_BOT_TOKEN=<token> node scripts/telegram-chat-id.mjs`
+4. Add both values to `.env.local` and to your hosting environment variables:
+   ```
+   TELEGRAM_BOT_TOKEN=123456789:AA...
+   TELEGRAM_CHAT_ID=123456789          # comma-separate several IDs to notify more people
+   ```
+5. Restart the server and submit a test request.
+
+If Telegram isn't set up or fails, the lead is still written to the server log. `LEAD_WEBHOOK_URL` (Zapier/Make) still works alongside Telegram.
 
 ## Next step: city landing pages
 

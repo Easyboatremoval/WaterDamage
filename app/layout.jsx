@@ -65,9 +65,12 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <a href={SITE.phoneHref} className="callbar" aria-label={`Call ${SITE.name} 24/7 at ${SITE.phone}`}>
-          <Icon name="phone" size={20} /> Call 24/7 — {SITE.phone}
-        </a>
+        <nav className="callbar" aria-label="Quick contact">
+          <a href={SITE.phoneHref} className="callbar-call" aria-label={`Call ${SITE.name} 24/7 at ${SITE.phone}`}>
+            <Icon name="phone" size={20} /> Call 24/7
+          </a>
+          <a href="/#estimate" className="callbar-inspect">Request an Inspection</a>
+        </nav>
       </body>
     </html>
   );
