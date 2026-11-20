@@ -40,7 +40,7 @@ export default function Footer() {
                 <Link href={cityPathByName(name)} title={`Water damage restoration in ${name}, FL`}>{name}</Link>
               </li>
             ))}
-            <li className="footer-more"><a href="/#service-areas">…and more</a></li>
+            <li className="footer-more"><Link href="/water-damage-restoration">…and more</Link></li>
           </ul>
         </div>
       </div>

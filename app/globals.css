@@ -320,3 +320,19 @@ p { margin: 0 0 1em; }
   .why-grid, .steps3, .svc-list { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; }
 }
+
+/* ---------- Service areas hub ---------- */
+.page-hero { padding-bottom: 56px; }
+.county-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.county-jump a { padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.25); color: #dcebf8; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.county-jump a:hover { border-color: var(--blue); color: var(--blue); }
+.county-list { display: grid; gap: 40px; }
+.county-block { scroll-margin-top: 120px; }
+.county-block h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); border-bottom: 2px solid var(--blue); padding-bottom: 8px; margin-bottom: 16px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.county-block h2 small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; text-transform: none; color: var(--muted); letter-spacing: 0; }
+.county-block ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px 20px; }
+.county-block a { display: block; padding: 6px 0; color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--line); }
+.county-block a:hover { color: var(--blue-2); border-bottom-color: var(--blue-2); }
+@media (max-width: 700px) {
+  .county-block ul { grid-template-columns: 1fr 1fr; }
+}

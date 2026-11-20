@@ -141,7 +141,7 @@ export default async function CityPage({ params }) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
-          { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${SITE.url}/#service-areas` },
+          { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${SITE.url}/water-damage-restoration` },
           { '@type': 'ListItem', position: 3, name: `${n}, FL`, item: url },
         ],
       },
@@ -162,7 +162,7 @@ export default async function CityPage({ params }) {
           <nav aria-label="Breadcrumb" className="breadcrumbs">
             <ol>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/#service-areas">Service Areas</Link></li>
+              <li><Link href="/water-damage-restoration">Service Areas</Link></li>
               <li aria-current="page">{n}, FL</li>
             </ol>
           </nav>
@@ -336,7 +336,7 @@ export default async function CityPage({ params }) {
               </li>
             ))}
           </ul>
-          <p className="nearby-all"><Link href="/#service-areas">See all Florida service areas →</Link></p>
+          <p className="nearby-all"><Link href="/water-damage-restoration">See all Florida service areas →</Link></p>
         </div>
       </section>
     </>
