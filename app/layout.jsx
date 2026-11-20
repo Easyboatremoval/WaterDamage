@@ -67,7 +67,8 @@ export default function RootLayout({ children }) {
         <Footer />
         <nav className="callbar" aria-label="Quick contact">
           <a href={SITE.phoneHref} className="callbar-call" aria-label={`Call ${SITE.name} 24/7 at ${SITE.phone}`}>
-            <Icon name="phone" size={20} /> Call 24/7
+            <Icon name="phone" size={20} />
+            <span className="callbar-text"><small>Call 24/7</small>{SITE.phone}</span>
           </a>
           <a href="/#estimate" className="callbar-inspect">Request an Inspection</a>
         </nav>
