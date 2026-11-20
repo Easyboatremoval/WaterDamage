@@ -260,7 +260,7 @@ p { margin: 0 0 1em; }
   .callbar-call { background: var(--blue); color: var(--navy); }
   .callbar-text { display: flex; flex-direction: column; align-items: flex-start; white-space: nowrap; font-size: 1.05rem; }
   .callbar-text small { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-  .callbar-inspect { background: var(--amber); color: var(--navy); }
+  .callbar-inspect { background: #f97316; color: var(--navy); }
 }
 
 @media (prefers-reduced-motion: reduce) {
