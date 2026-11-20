@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { SITE } from '@/lib/site';
 import { SERVICES } from '@/lib/content';
-import { REGIONS } from '@/lib/cities';
+import Link from 'next/link';
+import { FOOTER_CITIES, cityPathByName } from '@/lib/cities';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,11 +33,14 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="footer-h">Regions We Serve</h2>
-          <ul>
-            {REGIONS.map((r) => (
-              <li key={r.slug}><a href="/#service-areas">{r.name}</a></li>
+          <h2 className="footer-h">Cities We Serve</h2>
+          <ul className="footer-cities">
+            {FOOTER_CITIES.map((name) => (
+              <li key={name}>
+                <Link href={cityPathByName(name)} title={`Water damage restoration in ${name}, FL`}>{name}</Link>
+              </li>
             ))}
+            <li className="footer-more"><a href="/#service-areas">…and more</a></li>
           </ul>
         </div>
       </div>

@@ -191,7 +191,12 @@ p { margin: 0 0 1em; }
 .fl-pin.tier-2 .fl-pulse { display: none; }
 .fl-label { font-family: var(--font-body); font-weight: 700; font-size: 24px; fill: var(--navy); paint-order: stroke; stroke: rgba(255, 255, 255, 0.9); stroke-width: 6px; stroke-linejoin: round; }
 .fl-pin.tier-2 .fl-label { font-size: 20px; font-weight: 600; fill: var(--muted); }
-.fl-pin:hover .fl-dot { r: 11; }
+.fl-pin { cursor: pointer; }
+.fl-hit { fill: transparent; }
+.fl-pin:hover .fl-dot, .fl-pin:focus-visible .fl-dot { r: 11; }
+.fl-pin:hover .fl-label, .fl-pin:focus-visible .fl-label { fill: var(--blue-2); text-decoration: underline; }
+.fl-pin:focus { outline: none; }
+.fl-pin:focus-visible .fl-dot { stroke: var(--navy); }
 .fl-label-short { display: none; }
 .fl-map figcaption { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; color: var(--muted); font-weight: 600; font-size: 0.95rem; text-align: center; }
 .fl-key { flex: none; width: 14px; height: 14px; border-radius: 50%; background: #e0342b; border: 3px solid #fff; box-shadow: 0 0 0 1px var(--line); }
@@ -210,6 +215,8 @@ p { margin: 0 0 1em; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .site-footer a { color: #b8c9dc; text-decoration: none; }
 .site-footer a:hover { color: var(--blue); }
+.footer-cities { grid-template-columns: 1fr 1fr; column-gap: 18px; }
+.footer-more { grid-column: 1 / -1; font-style: italic; }
 .footer-bottom { border-top: 1px solid #16304d; margin-top: 36px; padding-top: 18px; font-size: 0.88rem; }
 .footer-bottom p { margin: 0; }
 

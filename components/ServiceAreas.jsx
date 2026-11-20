@@ -1,4 +1,4 @@
-import { MAP_CITIES } from '@/lib/cities';
+import { MAP_CITIES, cityPathByName } from '@/lib/cities';
 import { FL_MAP, FL_PATH, NEIGHBOR_PATH } from '@/lib/florida-map';
 
 const project = ({ lat, lon }) => ({
@@ -45,15 +45,16 @@ export default function ServiceAreas({ heading = 'Water Damage Restoration Servi
             {pins.map((p) => {
               const l = LABEL[p.label];
               return (
-                <g key={p.name} className={`fl-pin tier-${p.tier}`} transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})`}>
+                <a key={p.name} href={cityPathByName(p.name)} className={`fl-pin tier-${p.tier}`} transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})`}>
                   <title>{`Water damage restoration in ${p.name}, FL`}</title>
+                  <circle r="24" className="fl-hit" />
                   <circle r="16" className="fl-pulse" />
                   <circle r={p.tier === 1 ? 8 : 6} className="fl-dot" />
                   <text x={l.dx} y={l.dy} textAnchor={l.anchor} className={`fl-label${p.short ? ' has-short' : ''}`}>{p.name}</text>
                   {p.short && (
                     <text x={l.dx} y={l.dy} textAnchor={l.anchor} className="fl-label fl-label-short" aria-hidden="true">{p.short}</text>
                   )}
-                </g>
+                </a>
               );
             })}
           </svg>
