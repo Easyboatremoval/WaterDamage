@@ -71,7 +71,7 @@ p { margin: 0 0 1em; }
 .nav-links a:hover { color: var(--blue); }
 
 /* Hero */
-.hero { position: relative; background: radial-gradient(1100px 500px at 85% -10%, rgba(255, 255, 255, 0.2), transparent 60%), linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; padding: clamp(48px, 7vw, 88px) 0 150px; overflow: hidden; }
+.hero { position: relative; background: linear-gradient(100deg, rgba(6, 14, 30, 0.88) 0%, rgba(6, 14, 30, 0.72) 55%, rgba(6, 14, 30, 0.55) 100%), url('/images/structural-drying-air-movers-dehumidifier.webp') center 40% / cover no-repeat, #0a1428; color: #fff; padding: clamp(48px, 7vw, 88px) 0 150px; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
 .hero h1 { color: #fff; }
 .hero h1 span { display: block; color: var(--blue); }
