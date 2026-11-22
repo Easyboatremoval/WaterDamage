@@ -5,8 +5,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Icon from '@/components/Icons';
 
-const display = Oswald({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-display', display: 'swap' });
-const body = Barlow({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-body', display: 'swap' });
+const display = Oswald({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-display', display: 'swap' });
+const body = Barlow({ subsets: ['latin'], weight: ['500', '600', '700', '800', '900'], variable: '--font-body', display: 'swap' });
 
 const title = 'Water Damage Restoration Florida | 24/7 Emergency | CWM';
 const description =
@@ -52,7 +52,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#0a2540',
+  themeColor: '#0066ff',
   width: 'device-width',
   initialScale: 1,
 };
