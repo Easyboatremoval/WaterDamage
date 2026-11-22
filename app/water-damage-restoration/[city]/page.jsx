@@ -190,9 +190,9 @@ export default async function CityPage({ params }) {
           <QuoteForm />
         </div>
         <svg className="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 60c240 40 480 40 720 0s480-40 720 0v60H0Z" fill="#4d94ff" />
-          <path d="M0 85c240 30 480 30 720 0s480-30 720 0v35H0Z" fill="#0057e0" />
-          <path d="M0 105c240 18 480 18 720 0s480-18 720 0v15H0Z" fill="#eef5ff" />
+          <path d="M0 60c240 40 480 40 720 0s480-40 720 0v60H0Z" fill="#fff" fill-opacity="0.25" />
+          <path d="M0 85c240 30 480 30 720 0s480-30 720 0v35H0Z" fill="#fff" fill-opacity="0.5" />
+          <path d="M0 105c240 18 480 18 720 0s480-18 720 0v15H0Z" fill="#f5f8fc" />
         </svg>
       </section>
 
