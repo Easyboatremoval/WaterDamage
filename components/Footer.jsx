@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <p>© {year} {SITE.name}. All rights reserved. Serving {SITE.state}, US.</p>
+        <p>© {year} CWM DAMAGE RESTORATION LLC. All rights reserved. Proudly Serving {SITE.state}, US.</p>
       </div>
     </footer>
   );
