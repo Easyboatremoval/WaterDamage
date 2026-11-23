@@ -91,7 +91,7 @@ export default function ServiceAreasPage() {
             <a href={SITE.phoneHref} className="btn btn-call btn-lg">
               <Icon name="phone" size={20} /> Call {SITE.phone}
             </a>
-            <a href="/#estimate" className="btn btn-ghost btn-lg">Request an Inspection</a>
+            <a href="/#estimate" className="btn btn-ghost btn-lg">Request FREE Estimate</a>
           </div>
           <nav aria-label="Jump to county" className="county-jump">
             {groups.map((g) => (

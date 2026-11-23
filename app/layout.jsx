@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
             <Icon name="phone" size={20} />
             <span className="callbar-text"><small>Call 24/7</small>{SITE.phone}</span>
           </a>
-          <a href="/#estimate" className="callbar-inspect">Request an Inspection</a>
+          <a href="/#estimate" className="callbar-inspect">Request FREE Estimate</a>
         </nav>
       </body>
     </html>

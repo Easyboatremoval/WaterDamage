@@ -178,7 +178,7 @@ export default async function CityPage({ params }) {
               <a href={SITE.phoneHref} className="btn btn-call btn-lg">
                 <Icon name="phone" size={20} /> Call {SITE.phone}
               </a>
-              <a href="#estimate" className="btn btn-ghost btn-lg">Request an Inspection</a>
+              <a href="#estimate" className="btn btn-ghost btn-lg">Request FREE Estimate</a>
             </div>
             <ul className="hero-checks">
               <li><Icon name="check" size={18} /> 24/7 emergency water removal</li>
@@ -242,7 +242,7 @@ export default async function CityPage({ params }) {
                 <li key={s}><Icon name="check" size={18} /> {s}</li>
               ))}
             </ul>
-            <a href="#estimate" className="btn btn-primary btn-lg svc-btn">Request a Free Inspection</a>
+            <a href="#estimate" className="btn btn-primary btn-lg svc-btn">Request FREE Estimate</a>
           </div>
           <aside className="areas-card" aria-labelledby="areas-card-title">
             <h3 id="areas-card-title">{n} Areas We Cover</h3>

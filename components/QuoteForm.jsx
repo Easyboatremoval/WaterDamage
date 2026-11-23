@@ -94,7 +94,7 @@ export default function QuoteForm() {
 
   return (
     <form className="form-card" id="estimate" onSubmit={onSubmit}>
-      <h2 className="form-title">Request an Inspection</h2>
+      <h2 className="form-title">Request FREE Estimate</h2>
       <p className="form-sub">Tell us what happened — we call back fast, day or night.</p>
       <label>
         <span>Name</span>
