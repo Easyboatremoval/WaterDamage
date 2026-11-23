@@ -17,8 +17,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 110px; }
-body { margin: 0; font-family: var(--font-body); font-size: 17px; line-height: 1.6; font-weight: 500; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
+html { font-size: 18px; scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; font-family: var(--font-body); font-size: 1.06rem; line-height: 1.6; font-weight: 500; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--blue-2); }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; margin: 0 0 0.5em; color: var(--navy); letter-spacing: 0.005em; }
@@ -235,12 +235,13 @@ p { margin: 0 0 1em; }
 }
 
 @media (max-width: 700px) {
-  body { font-size: 16px; }
+  html { font-size: 17px; }
+  body { font-size: 1rem; }
   .topbar, .nav-call { display: none; }
   .nav-inner { justify-content: center; padding: 12px 0; }
   .brand { gap: 14px; }
   .brand img { width: 72px; height: 72px; }
-  .brand-name { font-size: 2.2rem; }
+  .brand-name { font-size: 35px; }
   .brand-sub { font-size: 0.92rem; letter-spacing: 0.1em; }
   .fl-map { padding: 6px; margin-left: -8px; margin-right: -8px; }
   .fl-pin.tier-2 .fl-label, .fl-sea, .fl-state { display: none; }
@@ -260,7 +261,7 @@ p { margin: 0 0 1em; }
   .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; box-shadow: 0 -6px 20px rgba(11, 37, 69, 0.15); padding-bottom: env(safe-area-inset-bottom, 0px); background: #fff; }
   .callbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 8px; font-weight: 900; font-size: 1rem; line-height: 1.15; text-align: center; text-decoration: none; }
   .callbar-call { background: var(--navy); color: #fff; }
-  .callbar-text { display: flex; flex-direction: column; align-items: flex-start; white-space: nowrap; font-size: 1.05rem; }
+  .callbar-text { display: flex; flex-direction: column; align-items: flex-start; white-space: nowrap; font-size: 17px; }
   .callbar-text small { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
   .callbar-inspect { background: #f97316; color: var(--navy); }
 }
