@@ -7,10 +7,10 @@ import { SITE } from '@/lib/site';
 import { SERVICES, TIMELINE, PROCESS, GALLERY, WAIT_TIPS, FAQS } from '@/lib/content';
 
 const TRUST = [
-  { icon: 'clock', title: '24/7/365', text: 'Answered day & night, holidays included' },
-  { icon: 'pin', title: 'All of Florida', text: 'Crews dispatched statewide' },
-  { icon: 'doc', title: 'Insurance-ready', text: 'Photos, moisture logs & reports' },
-  { icon: 'home', title: 'Homes & businesses', text: 'Residential and commercial' },
+  { icon: 'clock', title: '24/7/365'},
+  { icon: 'pin', title: 'PROUDLY SERVING ALL OF FLORIDA'},
+  { icon: 'doc', title: 'FULLY LICENSED AND INSURED'},
+  { icon: 'home', title: 'RESIDENTIAL AND COMMERCIAL'},
 ];
 
 export default function HomePage() {
@@ -24,7 +24,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <p className="eyebrow eyebrow-light">24/7 Emergency Water Damage Response</p>
             <h1 id="hero-title">
-              FLORIDA MOST RELIABLE <span>RESTORATION COMPANY</span>
+              FLORIDA'S MOST RELIABLE <span>RESTORATION COMPANY</span>
             </h1>
             <p className="hero-lead">
               Burst pipe, roof leak, hurricane flooding or a fire? CWM extracts the water, dries the structure, stops
@@ -35,13 +35,15 @@ export default function HomePage() {
               <a href={SITE.phoneHref} className="btn btn-call btn-lg">
                 <Icon name="phone" size={20} /> Call {SITE.phone}
               </a>
-              <a href="#estimate" className="btn btn-ghost btn-lg">Request an Inspection</a>
+              <a href="#estimate" className="btn btn-ghost btn-lg">Request FREE Estimate</a>
             </div>
             <ul className="hero-checks">
-              <li><Icon name="check" size={18} /> Water extraction &amp; structural drying</li>
-              <li><Icon name="check" size={18} /> Fire &amp; smoke damage restoration</li>
-              <li><Icon name="check" size={18} /> Mold remediation &amp; mitigation</li>
-              <li><Icon name="check" size={18} /> Water-damaged floor restoration</li>
+              <li><Icon name="check" size={18} /> Water &amp; flood damage</li>
+              <li><Icon name="check" size={18} /> Mold removal &amp; mitigation</li> 
+              <li><Icon name="check" size={18} /> Storm damage</li>
+              <li><Icon name="check" size={18} /> Fire &amp; smoke damage</li>
+              <li><Icon name="check" size={18} /> Roof tarping</li>
+              <li><Icon name="check" size={18} /> Property damage restoration</li>
             </ul>
           </div>
           <QuoteForm />
@@ -72,7 +74,7 @@ export default function HomePage() {
       <section className="section section-tint" aria-labelledby="work-title">
         <div className="container">
           <p className="eyebrow">From the field</p>
-          <h2 id="work-title">Water, Flood &amp; Storm Damage Jobs in Florida</h2>
+          <h2 id="work-title">Water, Flood &amp; Storm Damage Projects in Florida</h2>
           <div className="gallery">
             {GALLERY.map((g, i) => (
               <figure key={g.src} className={i === 0 ? 'gallery-feature' : undefined}>
@@ -88,7 +90,7 @@ export default function HomePage() {
       <section className="section" id="services" aria-labelledby="services-title">
         <div className="container">
           <p className="eyebrow">What we restore</p>
-          <h2 id="services-title">Water, Fire, Mold &amp; Floor Damage Restoration Services</h2>
+          <h2 id="services-title">Water, Fire, Mold &amp; Flood Damage Restoration Services</h2>
           <p className="section-lead">
             One call covers the whole job — from emergency water removal and flood cleanup to fire and smoke damage
             restoration, mold remediation and saving water-damaged floors. Our technicians use commercial air movers,
