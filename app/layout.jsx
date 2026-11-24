@@ -47,7 +47,13 @@ export const metadata = {
   },
   twitter: { card: 'summary_large_image', title, description, images: [SITE.ogImage] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: SITE.logo, type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   formatDetection: { telephone: true },
 };
 

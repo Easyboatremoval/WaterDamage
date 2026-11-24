@@ -18,7 +18,7 @@ npm run build
 npm start                    # uses the PORT env var if set
 ```
 
-**Render (Web Service):** Build command `npm install && npm run build`, start command `npm start`, and the environment variable `NEXT_PUBLIC_SITE_URL=https://www.your-domain.com`.
+**Render (Web Service):** Build command `npm install && npm run build`, start command `npm start` (the site URL `https://cwmwaterdamage.com` is set in `lib/site.js`).
 Vercel works without any setup.
 
 ## Where things live
