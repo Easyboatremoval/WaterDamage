@@ -44,20 +44,15 @@ The "Request an Inspection" form posts to `/api/contact`, which validates the le
 
 **Setup (about 3 minutes):**
 
-1. In Telegram, open **@BotFather**, send `/newbot`, and follow the prompts. Copy the token it gives you (`123456789:AA...`).
-2. Open your new bot and press **Start**. To send alerts to a team group, add the bot to the group and post any message there.
-3. Get the chat ID: `TELEGRAM_BOT_TOKEN=<token> node scripts/telegram-chat-id.mjs`
-4. Add both values to `.env.local` and to your hosting environment variables:
-   ```
-   TELEGRAM_BOT_TOKEN=123456789:AA...
-   TELEGRAM_CHAT_ID=123456789          # comma-separate several IDs to notify more people
-   ```
-5. Restart the server and submit a test request.
-
-If Telegram isn't set up or fails, the lead is still written to the server log. `LEAD_WEBHOOK_URL` (Zapier/Make) still works alongside Telegram.
-
+1. 
 ## Next step: city landing pages
 
 1. Create `app/water-damage-restoration/[city]/page.jsx` using `ALL_CITIES` from `lib/cities.js` and `generateStaticParams`.
 2. Give each city its own content (see `SEO-KEYWORDS.md`).
 3. Set `CITY_PAGES_LIVE = true` in `lib/cities.js`.
+
+Original HERO:
+
+Burst pipe, roof leak, hurricane flooding or a fire? CWM extracts the water, dries the structure, stops
+              mold before it starts and restores your home or business — and documents everything for your insurance
+              claim.

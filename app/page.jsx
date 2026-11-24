@@ -27,9 +27,7 @@ export default function HomePage() {
               FLORIDA'S MOST RELIABLE <span>RESTORATION COMPANY</span>
             </h1>
             <p className="hero-lead">
-              Burst pipe, roof leak, hurricane flooding or a fire? CWM extracts the water, dries the structure, stops
-              mold before it starts and restores your home or business — and documents everything for your insurance
-              claim.
+              Flooded home? Mold? Burst pipe? Fire damage? Call CWM now — 24/7 emergency response. We stop the leak, remove the water and get rid of the mold.
             </p>
             <div className="hero-ctas">
               <a href={SITE.phoneHref} className="btn btn-call btn-lg">
