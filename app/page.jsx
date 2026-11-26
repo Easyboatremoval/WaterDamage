@@ -24,7 +24,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <p className="eyebrow eyebrow-light">24/7 Emergency Water Damage Response</p>
             <h1 id="hero-title">
-              FLORIDA'S MOST RELIABLE <span>RESTORATION COMPANY</span>
+              FLORIDA'S MOST RELIABLE <span>WATER DAMAGE RESTORATION COMPANY</span>
             </h1>
             <p className="hero-lead">
               Flooded home? Mold? Burst pipe? Fire damage? Call CWM now — 24/7 emergency response. We stop the leak, remove the water and get rid of the mold.
