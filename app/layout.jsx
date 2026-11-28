@@ -10,7 +10,7 @@ const body = Barlow({ subsets: ['latin'], weight: ['500', '600', '700', '800', '
 
 const title = 'Water Damage Restoration Florida | 24/7 Emergency | CWM';
 const description =
-  '24/7 water damage restoration across Florida: water extraction, flood cleanup, fire & smoke damage, mold remediation & floor drying. Call (954) 836-9001.';
+  '24/7 water damage restoration across Florida: water extraction, flood cleanup, fire & smoke damage, mold remediation & floor drying. Call (954) 560-4422.';
 
 export const metadata = {
   metadataBase: new URL(SITE.url),
